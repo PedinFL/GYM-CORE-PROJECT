@@ -1,0 +1,1193 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111315;
+    color: #F4F4F5;
+}
+
+
+/* MENU LATERAL */
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+
+    background-color: #202428;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.logo span {
+    color: #A3E635;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+
+    color: #D4D4D8;
+
+    text-align: left;
+    font-size: 15px;
+
+    padding: 13px;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #30363B;
+    color: #A3E635;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 10px;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+.main-content {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+
+/* CABEÇALHO */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+    border-bottom: 1px solid #30363B;
+
+    margin-bottom: 30px;
+}
+
+.topbar span {
+    color: #A1A1AA;
+    font-size: 14px;
+}
+
+
+/* TELAS */
+
+.page h1 {
+    margin-bottom: 10px;
+}
+
+.page > p {
+    color: #A1A1AA;
+}
+
+
+/* BOAS-VINDAS */
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome p {
+    color: #A1A1AA;
+    margin-top: 8px;
+}
+
+
+/* CARDS */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.dashboard-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background-color: #202428;
+    border: 1px solid #30363B;
+
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.card h3 {
+    color: #A1A1AA;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+.dashboard-cards .card p {
+    color: #A3E635;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+
+        position: relative;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dashboard-cards,
+    .dashboard-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* CABEÇALHO DAS SEÇÕES */
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading p {
+    color: #A1A1AA;
+    margin-top: 8px;
+}
+
+
+/* FORMULÁRIO */
+
+.form-container {
+    max-width: 900px;
+}
+
+.form-group {
+    border: 1px solid #30363B;
+    background-color: #202428;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.form-group legend {
+    color: #A3E635;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    color: #D4D4D8;
+    font-size: 14px;
+}
+
+.form-field input,
+.form-field select {
+    background-color: #30363B;
+    border: 1px solid #454C52;
+    border-radius: 6px;
+
+    padding: 12px;
+
+    color: #F4F4F5;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: 1px solid #A3E635;
+    border-color: #A3E635;
+}
+
+
+/* BOTÕES */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #A3E635;
+    color: #111315;
+}
+
+.btn-secondary {
+    background-color: #30363B;
+    color: #F4F4F5;
+}
+
+.btn-primary:hover {
+    background-color: #8BC52B;
+}
+
+.btn-secondary:hover {
+    background-color: #454C52;
+}
+
+#profile-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #A3E635;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+}
+
+/* MÓDULO DE TREINAMENTOS */
+
+.workout-list-container {
+    margin-top: 35px;
+}
+
+.workout-list-container h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.workout-group {
+    background-color: #202428;
+    border: 1px solid #30363B;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.workout-group h3 {
+    color: #A3E635;
+    margin-bottom: 15px;
+}
+
+.workout-exercise {
+    background-color: #30363B;
+    padding: 15px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.workout-exercise p {
+    color: #A1A1AA;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.btn-delete {
+    background-color: #542B2B;
+    color: #FCA5A5;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 9px 12px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #783535;
+}
+
+.empty-message {
+    color: #A1A1AA;
+    padding: 20px;
+    background-color: #202428;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+
+    .workout-exercise {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+.workout-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit {
+    background-color: #35452A;
+    color: #A3E635;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 12px;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background-color: #465B35;
+}
+
+/* ==========================================
+   GYM CORE - PADRONIZAÇÃO VISUAL
+========================================== */
+
+/* Cabeçalho dos módulos */
+
+.section-header {
+    margin-bottom: 28px;
+}
+
+.section-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #A1A1AA;
+    font-size: 14px;
+}
+
+
+/* Painéis de conteúdo */
+
+.content-card {
+    background-color: #202428;
+    border: 1px solid #30363B;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 24px;
+}
+
+.content-card > h3 {
+    color: #F4F4F5;
+    font-size: 19px;
+    margin-bottom: 24px;
+}
+
+
+/* Formulários dos novos módulos */
+
+.content-card .form-group {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.content-card .form-group label {
+    display: block;
+    color: #D4D4D8;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+
+
+/* Campos de entrada */
+
+.content-card input,
+.content-card select,
+.content-card textarea,
+.form-field textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    background-color: #30363B;
+    color: #F4F4F5;
+
+    border: 1px solid #454C52;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: border-color 0.2s,
+                box-shadow 0.2s;
+}
+
+
+/* Destaque ao selecionar um campo */
+
+.content-card input:focus,
+.content-card select:focus,
+.content-card textarea:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #A3E635;
+    box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.12);
+}
+
+
+/* Campos de observações */
+
+.content-card textarea,
+.form-field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+
+/* Botões principais dos novos módulos */
+
+.content-card button[type="submit"] {
+    background-color: #A3E635;
+    color: #111315;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 13px 22px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+
+.content-card button[type="submit"]:hover {
+    background-color: #8BC52B;
+    transform: translateY(-1px);
+}
+
+
+/* Mensagens de confirmação */
+
+#evolution-message,
+#nutrition-message,
+#nutrition-goal-message,
+#exercise-message,
+#checkpoint-message,
+#workout-message {
+    color: #A3E635;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+
+/* Ajustes para telas pequenas */
+
+@media (max-width: 600px) {
+
+    .content-card {
+        padding: 18px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .content-card button[type="submit"] {
+        width: 100%;
+    }
+
+}
+    /* ==========================================
+   HISTÓRICOS E REGISTROS
+========================================== */
+
+/* Cartões dos registros */
+
+.workout-group {
+    background-color: #1B1F27;
+    border: 1px solid #30363B;
+    border-radius: 12px;
+
+    padding: 20px;
+    margin-bottom: 15px;
+
+    transition: border-color 0.2s,
+                transform 0.2s;
+}
+
+.workout-group:hover {
+    border-color: #59634B;
+    transform: translateY(-2px);
+}
+
+
+/* Títulos dos registros */
+
+.workout-group h3 {
+    color: #A3E635;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+
+/* Informações dos registros */
+
+.workout-group p {
+    color: #B8BCC4;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* Área dos botões */
+
+.workout-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 16px;
+    padding-top: 14px;
+
+    border-top: 1px solid #30363B;
+}
+
+
+/* Estilo compartilhado dos botões */
+
+.btn-edit,
+.btn-delete {
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    padding: 9px 16px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                border-color 0.2s,
+                transform 0.2s;
+}
+
+
+/* Botão editar */
+
+.btn-edit {
+    background-color: #35452A;
+    color: #A3E635;
+    border-color: #465B35;
+}
+
+.btn-edit:hover {
+    background-color: #465B35;
+    transform: translateY(-1px);
+}
+
+
+/* Botão excluir */
+
+.btn-delete {
+    background-color: #542B2B;
+    color: #FCA5A5;
+    border-color: #783535;
+}
+
+.btn-delete:hover {
+    background-color: #783535;
+    transform: translateY(-1px);
+}
+
+
+/* Mensagens de histórico vazio */
+
+.empty-message {
+    color: #A1A1AA;
+    background-color: #1B1F27;
+
+    border: 1px dashed #454C52;
+    border-radius: 10px;
+
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* Registros de exercícios */
+
+.workout-exercise {
+    border: 1px solid #454C52;
+    transition: border-color 0.2s;
+}
+
+.workout-exercise:hover {
+    border-color: #A3E635;
+}
+
+
+/* Responsividade dos históricos */
+
+@media (max-width: 600px) {
+
+    .workout-group {
+        padding: 16px;
+    }
+
+    .workout-actions {
+        flex-wrap: wrap;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        flex: 1;
+        padding: 11px;
+    }
+
+}
+
+    /* ==========================================
+   DASHBOARD - GYM CORE
+========================================== */
+
+/* Área de boas-vindas */
+.welcome {
+    background: linear-gradient(120deg, #202820, #202428 70%);
+    border: 1px solid #35452A;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome h1 {
+    color: #F4F4F5;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #A1A1AA;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Indicadores principais */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.dashboard-cards .card {
+    background: #202428;
+    border: 1px solid #30363B;
+    border-radius: 12px;
+    padding: 22px;
+    min-height: 115px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.dashboard-cards .card:hover {
+    border-color: #71834B;
+    transform: translateY(-3px);
+}
+
+.dashboard-cards .card h3 {
+    color: #A1A1AA;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.dashboard-cards .card p {
+    color: #A3E635;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Seções inferiores */
+.dashboard-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.dashboard-section .card {
+    background: #202428;
+    border: 1px solid #30363B;
+    border-radius: 12px;
+    padding: 24px;
+    min-height: 150px;
+    transition: border-color 0.2s;
+}
+
+.dashboard-section .card:hover {
+    border-color: #59634B;
+}
+
+.dashboard-section .card h3 {
+    color: #A3E635;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.dashboard-section .card p {
+    color: #B8BCC4;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h1 {
+        font-size: 21px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dashboard-cards .card {
+        padding: 16px;
+    }
+
+    .dashboard-cards .card p {
+        font-size: 22px;
+    }
+
+    .dashboard-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   GRÁFICO DE EVOLUÇÃO FÍSICA
+========================================== */
+
+.evolution-chart {
+    margin-bottom: 25px;
+}
+
+.chart-header {
+    margin-bottom: 20px;
+}
+
+.chart-header h3 {
+    margin-bottom: 6px;
+}
+
+.chart-header p {
+    color: #9CA3AF;
+    font-size: 0.9rem;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#weight-chart {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .chart-container {
+        height: 240px;
+    }
+}
+
+.chart-filter {
+    max-width: 250px;
+    margin-top: 180px;
+}
+
+.chart-filter select{
+    width: 100%;
+}
+
+/* ==========================================
+   HOME - GYM CORE
+========================================== */
+
+.home-hero {
+    min-height: 370px;
+    display: flex;
+    align-items: center;
+
+    padding: 45px;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #30363B;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba (10, 12, 13, 0.98) 0%,
+            rgba (10, 12, 13, 0.88) 40%,
+            rgba (10, 12, 13, 0.20) 100%
+        ),
+        url("./assets/home-banner.jpg");
+    background-image: url(".assets/home-banner.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-hero::after {
+    content: "GC";
+
+    position: absolute;
+    right: 35px;
+    bottom: -75px;
+
+    font-size: 280px;
+    font-weight: 900;
+    font-style: italic;
+
+    color: rgba(163, 230, 53, 0.06);
+
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 550px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-brand {
+    color: #A3E635;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.05;
+
+    margin: 20px 0;
+}
+
+.hero-content h1 span,
+.home-phrase span {
+    color: #A3E635;
+}
+
+.hero-content p {
+    color: #A1A1AA;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 420px;
+}
+
+.hero-button {
+    margin-top: 25px;
+
+    padding: 14px 22px;
+
+    background-color: #A3E635;
+    color: #111315;
+
+    border: none;
+    border-radius: 7px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #BEF264;
+    transform: translateY(-2px);
+}
+
+
+/* ACESSO RÁPIDO */
+
+.home-section-title {
+    margin-bottom: 20px;
+}
+
+.home-section-title h2 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.home-section-title p {
+    color: #A1A1AA;
+    font-size: 14px;
+}
+
+.home-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.home-shortcut {
+    background: linear-gradient(145deg, #202428, #15191c);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #30363B;
+    border-radius: 10px;
+
+    padding: 22px;
+
+    text-align: left;
+    color: #F4F4F5;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.home-shortcut:hover {
+    border-color: #A3E635;
+    transform: translateY(-4px);
+}
+
+.home-shortcut span {
+    display: block;
+    color: #A3E635;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.home-shortcut h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.home-shortcut p {
+    color: #A1A1AA;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* FRASE INSTITUCIONAL */
+
+.home-phrase {
+    margin-top: 25px;
+    padding: 25px;
+
+    border-left: 3px solid #A3E635;
+    background-color: #1A1E21;
+}
+
+.home-phrase p {
+    font-size: 18px;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .home-shortcuts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .home-hero {
+        min-height: 320px;
+        padding: 25px;
+    }
+
+    .home-hero::after {
+        font-size: 170px;
+        right: 5px;
+    }
+
+    .home-shortcuts {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================
+   IMAGENS DOS CARDS - HOME
+========================================== */
+
+.home-shortcut:nth-child(1) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(15, 18, 19, 0.95),
+            rgba(15, 18, 19, 0.35)
+        ),
+        url("assets/treinamentos.jpg");
+}
+
+.home-shortcut:nth-child(2) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(15, 18, 19, 0.95),
+            rgba(15, 18, 19, 0.35)
+        ),
+        url("assets/evolucao.jpg");
+}
+
+.home-shortcut:nth-child(3) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(15, 18, 19, 0.95),
+            rgba(15, 18, 19, 0.35)
+        ),
+        url("assets/nutricao.jpg");
+}
+
+.home-shortcut:nth-child(4) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(15, 18, 19, 0.95),
+            rgba(15, 18, 19, 0.35)
+        ),
+        url("assets/checkpoint.jpg");
+}

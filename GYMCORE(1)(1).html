@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GYM CORE | Painel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+        <img src="assets/gym-core-logo.svg" alt="GYM CORE">
+        </div>
+
+        <nav class="menu">
+
+            <button class="menu-item active" data-view="home">
+                Home
+            </button>
+
+            <button class="menu-item" data-view="painel">
+                Painel
+            </button>
+
+           <!-- <button class="menu-item active" data-view="painel">
+                Painel
+            </button> --> 
+
+            <button class="menu-item" data-view="perfil">
+                Meu perfil
+            </button>
+
+            <button class="menu-item" data-view="treinamentos">
+                Treinamentos
+            </button>
+
+            <button class="menu-item" data-view="checkpoint">
+                Checkpoint
+            </button>
+
+            <button class="menu-item" data-view="evolucao">
+                Evolução
+            </button>
+
+            <button class="menu-item" data-view="nutricao">
+                Nutrição
+            </button>
+
+            <button class="menu-item" data-view="biblioteca">
+                Biblioteca
+            </button>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>GYM CORE v1.0</p>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2 id="page-title">Painel de acompanhamento</h2>
+            <span>Minha área fitness</span>
+        </header>
+
+        <!-- TELA HOME -->
+<section class="page" id="home">
+
+    <div class="home-hero">
+
+        <div class="hero-content">
+
+            <span class="hero-brand">GYM CORE</span>
+
+            <h1>
+                EVOLUÇÃO<br>
+                COM <span>MÉTODO.</span>
+            </h1>
+
+            <p>
+                Organize seus treinos, acompanhe sua evolução
+                e alcance seus objetivos.
+            </p>
+
+            <button class="hero-button" data-view="painel">
+                Acessar meu painel →
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="home-section-title">
+        <h2>Acesso rápido</h2>
+        <p>Explore as ferramentas da GYM CORE.</p>
+    </div>
+
+    <div class="home-shortcuts">
+
+        <button class="home-shortcut" data-view="treinamentos">
+            <span>01</span>
+            <h3>Treinamentos</h3>
+            <p>Organize sua rotina de exercícios.</p>
+        </button>
+
+        <button class="home-shortcut" data-view="evolucao">
+            <span>02</span>
+            <h3>Evolução</h3>
+            <p>Acompanhe suas medidas e resultados.</p>
+        </button>
+
+        <button class="home-shortcut" data-view="nutricao">
+            <span>03</span>
+            <h3>Nutrição</h3>
+            <p>Controle sua alimentação e macros.</p>
+        </button>
+
+        <button class="home-shortcut" data-view="checkpoint">
+            <span>04</span>
+            <h3>Checkpoint</h3>
+            <p>Registre seus hábitos e desempenho.</p>
+        </button>
+
+    </div>
+
+    <div class="home-phrase">
+        <p>DISCIPLINA É O QUE GERA <span>RESULTADO.</span></p>
+    </div>
+
+</section>
+
+
+        <!-- TELA PAINEL -->
+        <section class="page" id="painel" hidden>
+
+            <div class="welcome">
+                <h1 id="welcome-name">Bem-vindo ao GYM CORE!</h1>
+                <p id="welcome-goal">Acompanhe seus resultados e mantenha sua evolução.</p>
+            </div>
+
+            <div class="dashboard-cards">
+
+                <article class="card">
+                    <h3>Pesoa atual</h3>
+                    <p id="dashboard-weight">-- kg</p>
+                </article>
+
+                <article class="card">
+                    <h3>Registros no mês</h3>
+                    <p id="dashboard-checkpoints">0</p>
+                </article>
+            
+                <article class="card">
+                    <h3>Treinos realizados</h3>
+                    <p id="dashboard-training-days">0</p>
+                </article>
+            
+                <article class="card">
+                    <h3>Média de sono</h3>
+                    <p id="dashboard-sleep">0h</p>
+                </article>
+            
+                <article class="card">
+                    <h3>Média de água</h3>
+                    <p id="dashboard-water">0 L</p>
+                </article>
+            
+            </div>
+            
+            <div class="dashboard-section">
+
+                <article class="card">
+                    <h3>Minha rotina de treino</h3>
+                    <p id="dashboard-workout-count">
+                        Nenhum exercício cadastrado.
+                    </p>
+                    <p id="dashboard-workout-divisions">
+                        Cadastre seus treinamentos.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Resumo nutricional de hoje</h3>
+                    <p id="dashboard-nutrition-calories">
+                        0 / -- kcal
+                    </p>
+                    <p id="dashboard-nutrition-protein">
+                        0 / -- g de proteína
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Última evolução física</h3>
+                    <p id="dashboard-evolution-weight">
+                        Nenhuma medição registrada.
+                    </p>
+                    <p id="dashboard-evolution-date">
+                        Registre sua evolução física.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+       <section class="page" id="perfil" hidden>
+
+    <div class="section-heading">
+        <h1>Meu perfil</h1>
+        <p>Gerencie suas informações pessoais e físicas.</p>
+    </div>
+
+    <form id="profile-form">
+
+        <div class="form-container">
+
+            <fieldset class="form-group">
+
+                <legend>Dados pessoais</legend>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" required
+                               placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade"
+                               min="14" max="100" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo" required>
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                            <option value="nao-informado">Prefiro não informar</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <fieldset class="form-group">
+
+                <legend>Informações físicas</legend>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="altura">Altura (cm)</label>
+                        <input type="number" id="altura"
+                               min="100" max="250" required
+                               placeholder="Ex: 180">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="peso">Peso atual (kg)</label>
+                        <input type="number" id="peso"
+                               min="20" max="300" step="0.1" required
+                               placeholder="Ex: 68.5">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="tempo-treino">Tempo de treinamento</label>
+                        <select id="tempo-treino" required>
+                            <option value="">Selecione</option>
+                            <option value="menos de 6 meses">Menos de 6 meses</option>
+                            <option value="6 meses a 1 ano">6 meses a 1 ano</option>
+                            <option value="1 a 3 anos">1 a 3 anos</option>
+                            <option value="mais de 3 anos">Mais de 3 anos</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <fieldset class="form-group">
+
+                <legend>Objetivos</legend>
+
+                <div class="form-field">
+
+                    <label for="objetivo">Objetivo principal</label>
+
+                    <select id="objetivo" required>
+                        <option value="">Selecione</option>
+                        <option value="hipertrofia">Hipertrofia</option>
+                        <option value="emagrecimento">Emagrecimento</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="forca">Ganho de força</option>
+                    </select>
+
+                </div>
+
+            </fieldset>
+
+
+            <div class="form-actions">
+
+                <button type="submit" class="btn-primary">
+                    Salvar perfil
+                </button>
+
+                <button type="reset" class="btn-secondary">
+                    Limpar formulário
+                </button>
+
+            </div>
+
+            <p id="profile-message" aria-live="polite"></p>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+        <!-- TELA TREINAMENTOS -->
+        <section class="page" id="treinamentos" hidden>
+
+    <div class="section-heading">
+        <h1>Meus treinamentos</h1>
+        <p>Organize suas divisões e exercícios.</p>
+    </div>
+
+    <!-- FORMULÁRIO DE EXERCÍCIOS -->
+
+    <form id="workout-form">
+
+        <fieldset class="form-group">
+
+            <legend>Adicionar exercício</legend>
+
+            <div class="form-grid">
+
+                <div class="form-field">
+                    <label for="divisao">Divisão de treino</label>
+
+                    <select id="divisao" required>
+                        <option value="">Selecione</option>
+                        <option value="Treino A">Treino A</option>
+                        <option value="Treino B">Treino B</option>
+                        <option value="Treino C">Treino C</option>
+                        <option value="Treino D">Treino D</option>
+                        <option value="Treino E">Treino E</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="grupo-muscular">Grupo muscular</label>
+
+                    <select id="grupo-muscular" required>
+                        <option value="">Selecione</option>
+                        <option value="Peitoral">Peitoral</option>
+                        <option value="Costas">Costas</option>
+                        <option value="Ombros">Ombros</option>
+                        <option value="Bíceps">Bíceps</option>
+                        <option value="Tríceps">Tríceps</option>
+                        <option value="Quadríceps">Quadríceps</option>
+                        <option value="Posteriores">Posteriores</option>
+                        <option value="Glúteos">Glúteos</option>
+                        <option value="Panturrilhas">Panturrilhas</option>
+                        <option value="Abdômen">Abdômen</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="exercicio">Nome do exercício</label>
+
+                    <input type="text" id="exercicio"
+                           placeholder="Ex: Supino reto" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="series">Séries</label>
+
+                    <input type="number" id="series"
+                           min="1" max="20" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="repeticoes">Repetições</label>
+
+                    <input type="number" id="repeticoes"
+                           min="1" max="100" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="carga">Carga (kg)</label>
+
+                    <input type="number" id="carga"
+                           min="0" max="1000" step="0.5"
+                           value="0" required>
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary" id="workout-submit">
+                    Adicionar exercício
+                </button>
+            </div>
+
+            <p id="workout-message" aria-live="polite"></p>
+
+        </fieldset>
+
+    </form>
+
+
+    <!-- LISTA DE EXERCÍCIOS -->
+
+    <div class="workout-list-container">
+
+        <h2>Minha rotina</h2>
+
+        <div id="workout-list">
+
+            <!-- Exercícios serão inseridos pelo JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- TELA CHECKPOINT -->
+        <section class="page" id="checkpoint" hidden>
+
+            <div class="section-heading">
+                <h1>Checkpoint diário</h1>
+                <p>Acompanhe sua rotina e registre suas atividades.</p>
+            </div>
+        
+            <form id="checkpoint-form">
+        
+                <fieldset class="form-group">
+        
+                    <legend>Registro diário</legend>
+        
+                    <div class="form-grid">
+        
+                        <div class="form-field">
+                            <label for="checkpoint-date">Data</label>
+                            <input type="date" id="checkpoint-date" required>
+                        </div>
+        
+                        <div class="form-field">
+                            <label for="checkpoint-sleep">Horas de sono</label>
+                            <input type="number" id="checkpoint-sleep"
+                                   min="0" max="24" step="0.5" required>
+                        </div>
+        
+                        <div class="form-field">
+                            <label for="checkpoint-water">Consumo de água (litros)</label>
+                            <input type="number" id="checkpoint-water"
+                                   min="0" max="20" step="0.1" required>
+                        </div>
+        
+                        <div class="form-field">
+                            <label for="checkpoint-energy">Nível de energia</label>
+                            <select id="checkpoint-energy" required>
+                                <option value="">Selecione</option>
+                                <option value="Baixo">Baixo</option>
+                                <option value="Moderado">Moderado</option>
+                                <option value="Alto">Alto</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-field">
+                            <label for="checkpoint-training">Treinamento</label>
+                            <select id="checkpoint-training" required>
+                                <option value="">Selecione</option>
+                                <option value="Realizado">Realizado</option>
+                                <option value="Não realizado">Não realizado</option>
+                                <option value="Descanso">Dia de descanso</option>
+                            </select>
+                        </div>
+        
+                    </div>
+        
+                    <div class="form-field">
+                        <label for="checkpoint-notes">Observações</label>
+                        <textarea id="checkpoint-notes"
+                                  placeholder="Como foi seu dia?"></textarea>
+                    </div>
+        
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary"
+                                id="checkpoint-submit">
+                            Salvar registro
+                        </button>
+                    </div>
+        
+                    <p id="checkpoint-message" aria-live="polite"></p>
+        
+                </fieldset>
+        
+            </form>
+        
+            <div class="workout-list-container">
+                <h2>Histórico diário</h2>
+                <div id="checkpoint-list"></div>
+            </div>
+        
+        </section>
+
+
+        <!-- TELA EVOLUÇÃO -->
+        <section class="page" id="evolucao" hidden>
+
+        <!-- GRÁFICO DE EVOLUÇÃO DO PESO -->
+
+        <div class="content-card evolution-chart">
+
+            <div class="chart-header">
+                <h3 id="evolution-chart-title">Evolução do peso corporal</h3>
+                <p>Acompanhe a variação do seu peso ao longo do tempo.</p>
+            </div>
+
+            <div class="form-group chart-filter">
+
+                <label for="evolution-metric">Indicador:</label>
+            
+                <select id="evolution-metric">
+                    <option value="peso">Peso corporal</option>
+                    <option value="peitoral">Peitoral</option>
+                    <option value="cintura">Cintura</option>
+                    <option value="braco">Braço</option>
+                    <option value="coxa">Coxa</option>
+                </select>
+            
+            </div>
+
+            <div class="chart-container">
+                <canvas id="weight-chart"></canvas>
+            </div>
+
+        </div>
+
+            <div class="section-header">
+                <h2>Evolução Física</h2>
+                <p>Acompanhe seu desenvolvimento corporal.</p>
+            </div>
+        
+            <div class="dashboard-cards">
+        
+                <article class="card">
+                    <h3 id="initial-weight-title">Peso inicial</h3>
+                    <p id="initial-weight">-- kg</p>
+                </article>
+        
+                <article class="card">
+                    <h3 id="current-weight-title">Peso atual</h3>
+                    <p id="current-weight">-- kg</p>
+                </article>
+        
+                <article class="card">
+                    <h3 id="weight-variation-title">Variação de peso</h3>
+                    <p id="weight-variation">-- kg</p>
+                </article>
+        
+            </div>
+        
+            <div class="content-card">
+        
+                <h3>Novo registro</h3>
+        
+                <form id="evolution-form">
+        
+                    <div class="form-group">
+                        <label for="evolution-date">Data</label>
+                        <input type="date" id="evolution-date" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="evolution-weight">Peso (kg)</label>
+                        <input type="number" id="evolution-weight"
+                            step="0.1" min="0" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="evolution-chest">Peitoral (cm)</label>
+                        <input type="number" id="evolution-chest"
+                            step="0.1" min="0">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="evolution-waist">Cintura (cm)</label>
+                        <input type="number" id="evolution-waist"
+                            step="0.1" min="0">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="evolution-arm">Braço (cm)</label>
+                        <input type="number" id="evolution-arm"
+                            step="0.1" min="0">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="evolution-thigh">Coxa (cm)</label>
+                        <input type="number" id="evolution-thigh"
+                            step="0.1" min="0">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="evolution-notes">Observações</label>
+                        <textarea id="evolution-notes"
+                            placeholder="Descreva sua evolução..."></textarea>
+                    </div>
+        
+                    <button type="submit" id="evolution-submit">
+                        Salvar registro
+                    </button>
+        
+                    <p id="evolution-message"></p>
+        
+                </form>
+        
+            </div>
+        
+            <div class="content-card">
+        
+                <h3>Histórico de evolução</h3>
+        
+                <div id="evolution-history">
+                    <p class="empty-message">
+                        Nenhum registro de evolução encontrado.
+                    </p>
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+        <!-- TELA NUTRIÇÃO -->
+        <section class="page" id="nutricao" hidden>
+
+            <div class="section-header">
+                <h2>Nutrição</h2>
+                <p>Monitore sua alimentação e acompanhe seus macros.</p>
+            </div>
+        
+            <!-- INDICADORES NUTRICIONAIS -->
+        
+            <div class="dashboard-cards">
+        
+                <article class="card">
+                    <h3>Calorias consumidas</h3>
+                    <p id="nutrition-calories">0 kcal</p>
+                </article>
+        
+                <article class="card">
+                    <h3>Proteínas</h3>
+                    <p id="nutrition-protein">0 g</p>
+                </article>
+        
+                <article class="card">
+                    <h3>Carboidratos</h3>
+                    <p id="nutrition-carbs">0 g</p>
+                </article>
+        
+                <article class="card">
+                    <h3>Gorduras</h3>
+                    <p id="nutrition-fats">0 g</p>
+                </article>
+        
+            </div>
+        
+        
+            <!-- METAS NUTRICIONAIS -->
+        
+            <div class="content-card">
+        
+                <h3>Metas diárias</h3>
+        
+                <form id="nutrition-goal-form">
+        
+                    <div class="form-group">
+                        <label for="goal-calories">Meta de calorias (kcal)</label>
+                        <input type="number" id="goal-calories"
+                            min="1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="goal-protein">Meta de proteínas (g)</label>
+                        <input type="number" id="goal-protein"
+                            min="1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="goal-carbs">Meta de carboidratos (g)</label>
+                        <input type="number" id="goal-carbs"
+                            min="1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="goal-fats">Meta de gorduras (g)</label>
+                        <input type="number" id="goal-fats"
+                            min="1" required>
+                    </div>
+        
+                    <button type="submit">
+                        Salvar metas
+                    </button>
+        
+                    <p id="nutrition-goal-message"></p>
+        
+                </form>
+        
+            </div>
+        
+        
+            <!-- CADASTRO DE REFEIÇÕES -->
+        
+            <div class="content-card">
+        
+                <h3>Registrar alimentação</h3>
+        
+                <form id="nutrition-form">
+        
+                    <div class="form-group">
+                        <label for="nutrition-date">Data</label>
+                        <input type="date" id="nutrition-date" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="meal-type">Refeição</label>
+        
+                        <select id="meal-type" required>
+                            <option value="">Selecione</option>
+                            <option value="Café da manhã">Café da manhã</option>
+                            <option value="Lanche da manhã">Lanche da manhã</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Lanche da tarde">Lanche da tarde</option>
+                            <option value="Pré-treino">Pré-treino</option>
+                            <option value="Pós-treino">Pós-treino</option>
+                            <option value="Jantar">Jantar</option>
+                            <option value="Ceia">Ceia</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="food-name">Alimento</label>
+                        <input type="text" id="food-name"
+                            placeholder="Ex: Arroz branco" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="food-quantity">Quantidade (g)</label>
+                        <input type="number" id="food-quantity"
+                            min="0.1" step="0.1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="food-calories">Calorias (kcal)</label>
+                        <input type="number" id="food-calories"
+                            min="0" step="0.1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="food-protein">Proteínas (g)</label>
+                        <input type="number" id="food-protein"
+                            min="0" step="0.1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="food-carbs">Carboidratos (g)</label>
+                        <input type="number" id="food-carbs"
+                            min="0" step="0.1" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="food-fats">Gorduras (g)</label>
+                        <input type="number" id="food-fats"
+                            min="0" step="0.1" required>
+                    </div>
+        
+                    <button type="submit" id="nutrition-submit">
+                        Registrar alimento
+                    </button>
+        
+                    <p id="nutrition-message"></p>
+        
+                </form>
+        
+            </div>
+        
+        
+            <!-- HISTÓRICO ALIMENTAR -->
+        
+            <div class="content-card">
+        
+                <h3>Histórico alimentar</h3>
+        
+                <div class="form-group">
+        
+                    <label for="nutrition-filter-date">
+                        Consultar data
+                    </label>
+        
+                    <input type="date" id="nutrition-filter-date">
+        
+                </div>
+        
+                <div id="nutrition-history">
+        
+                    <p class="empty-message">
+                        Nenhum alimento registrado.
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+        <!-- TELA BIBLIOTECA -->
+        <section class="page" id="biblioteca" hidden>
+
+            <div class="section-header">
+                <h2>Biblioteca de Exercícios</h2>
+                <p>Organize e consulte seus exercícios.</p>
+            </div>
+        
+            <div class="content-card">
+        
+                <h3>Cadastrar exercício</h3>
+        
+                <form id="exercise-form">
+        
+                    <div class="form-group">
+                        <label for="exercise-name">Nome do exercício</label>
+                        <input type="text" id="exercise-name" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="exercise-group">Grupo muscular</label>
+        
+                        <select id="exercise-group" required>
+                            <option value="">Selecione</option>
+                            <option value="Peitoral">Peitoral</option>
+                            <option value="Costas">Costas</option>
+                            <option value="Ombros">Ombros</option>
+                            <option value="Bíceps">Bíceps</option>
+                            <option value="Tríceps">Tríceps</option>
+                            <option value="Quadríceps">Quadríceps</option>
+                            <option value="Posterior">Posterior</option>
+                            <option value="Glúteos">Glúteos</option>
+                            <option value="Panturrilhas">Panturrilhas</option>
+                            <option value="Abdômen">Abdômen</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="exercise-description">Descrição</label>
+                        <textarea id="exercise-description"
+                            placeholder="Descreva a execução do exercício..."></textarea>
+                    </div>
+        
+                    <button type="submit" id="exercise-submit">
+                        Cadastrar exercício
+                    </button>
+        
+                    <p id="exercise-message"></p>
+        
+                </form>
+        
+            </div>
+        
+            <div class="content-card">
+        
+                <h3>Exercícios cadastrados</h3>
+        
+                <div class="form-group">
+                    <label for="exercise-filter">Filtrar por grupo muscular</label>
+        
+                    <select id="exercise-filter">
+                        <option value="">Todos os grupos</option>
+                        <option value="Peitoral">Peitoral</option>
+                        <option value="Costas">Costas</option>
+                        <option value="Ombros">Ombros</option>
+                        <option value="Bíceps">Bíceps</option>
+                        <option value="Tríceps">Tríceps</option>
+                        <option value="Quadríceps">Quadríceps</option>
+                        <option value="Posterior">Posterior</option>
+                        <option value="Glúteos">Glúteos</option>
+                        <option value="Panturrilhas">Panturrilhas</option>
+                        <option value="Abdômen">Abdômen</option>
+                    </select>
+                </div>
+        
+                <div id="exercise-list">
+                    <p class="empty-message">
+                        Nenhum exercício cadastrado.
+                    </p>
+                </div>
+        
+            </div>
+        
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

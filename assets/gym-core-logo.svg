@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#A1A1AA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monograma G -->
+  <path d="M35 20 H155 L133 48 H76 L55 105 H112 L120 88 H92 L108 65 H166 L138 132 H24 L9 112 L40 28 Z"
+        fill="url(#silver)"/>
+
+  <!-- Monograma C -->
+  <path d="M180 48 H310 L286 76 H211 L195 112 H267 L250 132 H155 L142 115 L168 58 Z"
+        fill="#A3E635"/>
+
+  <!-- Nome da marca -->
+  <text x="210" y="155"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="25"
+        font-weight="900"
+        letter-spacing="3"
+        fill="#FFFFFF">
+    GYM <tspan fill="#A3E635">CORE</tspan>
+  </text>
+</svg>
